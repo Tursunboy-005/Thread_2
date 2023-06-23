@@ -6,7 +6,7 @@ namespace Thread_2
     {
         static void Main(string[] args)
         {
-            Stopwatch sw = new Stopwatch();
+           
             Thread thread = new Thread(() => Print());
             Thread thread1 = new Thread(() => Print());
             Thread thread2 = new Thread(() => Print());
@@ -22,9 +22,7 @@ namespace Thread_2
             thread3.Start();
             thread4.Start();
 
-            sw.Stop();
-
-            Console.WriteLine(sw);
+            
         }
 
         public static void Print()
@@ -32,7 +30,7 @@ namespace Thread_2
             
             for (double i = 0; i < 100000; i++)
             {
-                Console.WriteLine(Thread.CurrentThread.Name +i);
+                Console.WriteLine(Thread.CurrentThread.Name + i);
             }
             
         }
